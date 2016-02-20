@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+#wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+p,
+li,
+.radio-label {
+  text-align: center;
+}
+
+/*----------Navigation------------*/
+ul {
+  padding: 0;
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav li {
+  list-style: none;
+  border: 1px solid red;
+  width: 100%;
+  font-size: 1.4em;
+}
+.main-nav li a {
+  display: block;
+  color: blue;
+  width: 100%;
+  padding: 15px 0;
+}
+
+/*----------RSVP form------------*/
+.rsvp,
+.attending {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit,
+.rsvp-name,
+.rsvp-guest {
+  width: 100%;
+  height: 60px;
+  font-size: 2em;
+}
+.submit {
+
+}
+#form-radio {
+  border: 1px solid red;
+  padding: 20px 0;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="radio"] {
+  margin: 0 15px;
+
+}
+/*----------Location------------*/
+.location {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
+.location h2 {
+  order: 3;
+}
+.location img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  max-width: 400px;
+  margin: 10px auto 0 auto;
+}
+.address {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4em;
+}
+.address a {
+  border: 1px solid red;
+  padding: 10px 0;
+}
+address {
+  margin-bottom: 10px;
+}
+/*----------Registry------------*/
+.registry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.registry img {
+  border: 1px solid red;
+  width: 100%;
+  padding: 5px;
+}
+
+/*----------Image Gallery------------*/
+.photos {
+  
+}
+
+/*----------Media Queries------------*/
+
+@media (min-width: 650px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /*----------Navigation------------*/
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .main-nav h1 {
+    flex-grow: 1;
+    width: 100%;
+  }
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+  }
+  .main-nav ul li {
+    width: 25%
+  }
+  /*----------RSVP Form------------*/
+  .rsvp {
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+  }
+  /*----------Location------------*/
+  /*----------Registry------------*/
+  /*----------Image Gallery------------*/
+}
