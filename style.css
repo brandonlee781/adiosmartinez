@@ -1,0 +1,245 @@
+/*color pallet:
+#e2dac6  #eec
+lightgray
+hsl(42,32,83)
+rgb(226,218,198)
+
+#c0a182  #ca8
+rosybrown
+hsl(30,32,63)
+rgb(192,161,130)
+
+#88987c  #9a8
+gray
+hsl(94,11,54)
+rgb(136,152,124)
+
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #e2dac6;
+}
+#wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+h2,
+h3,
+p,
+li,
+.radio-label {
+  text-align: center;
+}
+/*----------Navigation------------*/
+ul {
+  padding: 0;
+}
+h1 {
+  display: none;
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav li {
+  list-style: none;
+  border: 1px solid red;
+  width: 100%;
+  font-size: 1.4em;
+}
+.main-nav li a {
+  display: block;
+  color: blue;
+  width: 100%;
+  padding: 15px 0;
+}
+
+/*----------RSVP form------------*/
+.rsvp,
+.attending {
+  display: flex;
+  flex-direction: column;
+}
+.rsvp-name {
+  height: 60px;
+  font-size: 1.8em;
+  width: 100%;
+  text-align: center;
+}
+.submit,
+#form-radio {
+	display: inline-block;
+	width: 100%;
+	height: 60px;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	padding: 10px 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+	margin-bottom: 3px;
+}
+#rsvp-attending,
+#rsvp-not-attending {
+  display: none;
+}
+
+#form-radio {
+  background-color: #c0a182;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+	padding-bottom: 5px;
+	font-size: 24px;
+	text-align: center;
+}
+#form-radio:hover {
+	background-color: #ae8f60;
+	border-color: rgba(0,0,0,0.5);
+}
+	
+#form-radio:active {
+	background-color: #8b5c3d;
+	border-color: rgba(0,0,0,0.9);
+}
+#rsvp-attending:checked + #form-radio,
+#rsvp-not-attending:checked + #form-radio{
+  background-color: #88987c;
+}
+
+.submit {
+  background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+	font-size: 24px;
+}
+.submit:hover {
+	background-color: #4F87A2;
+	border-color: rgba(0,0,0,0.5);
+}
+	
+.submit:active {
+	background-color: #3C677B;
+	border-color: rgba(0,0,0,0.9);
+}
+
+/*----------Location------------*/
+.location {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.location img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  max-width: 400px;
+  margin: 10px auto 0 auto;
+  order: 3;
+}
+.address,
+.uclub-links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4em;
+}
+.uclub-links a {
+  border: 1px solid red;
+  padding: 10px 0;
+}
+address {
+  margin-bottom: 10px;
+}
+/*----------Registry------------*/
+.registry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.registry img {
+  border-top: 1px solid lightgrey;
+  width: 100%;
+  padding: 5px;
+}
+
+/*----------Image Gallery------------*/
+.photos {
+  
+}
+
+/*----------Media Queries------------*/
+
+@media (min-width: 650px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /*----------Navigation------------*/
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .main-nav ul {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    order: -1;
+    justify-content: space-around;
+  }
+  .main-nav img {
+    margin: auto;
+    height: 100vh;
+    max-width: 100%;
+  }
+  .main-nav ul li {
+    width: 25%;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+  }
+  /*----------RSVP Form------------*/
+  .rsvp {
+    width: 80%;
+    margin: auto;
+    max-width: 500px;
+  }
+  /*----------Location------------*/
+  /*----------Registry------------*/
+  .registry {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .registry h2 {
+    width: 100%;
+  }
+  .registry p {
+    width: 100%;
+    margin: auto;
+  }
+  .registry-gifts,
+  .registry-cash {
+    width: 50%;
+  }
+  .registry img {
+    width: 90%;
+  }
+  /*----------Image Gallery------------*/
+}
