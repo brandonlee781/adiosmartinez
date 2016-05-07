@@ -1,0 +1,118 @@
+/*color pallet:
+#e2dac6  #eec
+lightgray
+hsl(42,32,83)
+rgb(226,218,198)
+#c0a182  #ca8
+rosybrown
+hsl(30,32,63)
+rgb(192,161,130)
+#88987c  #9a8
+gray
+hsl(94,11,54)
+rgb(136,152,124)
+*/
+* {
+  font-family: "Roboto",sans-serif; }
+
+body {
+  background-color: #d9d9d9; }
+
+button {
+  background-color: #c0a182 !important; }
+
+header {
+  background-color: #c0a182 !important; }
+
+main .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 75vh;
+  background-image: url(/images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-size: 120% 120%; }
+  main .hero-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; }
+
+main .rsvp-card {
+  margin: 25px auto; }
+  main .rsvp-card .rsvp-title {
+    background-color: #c0a182 !important;
+    color: #fff; }
+  main .rsvp-card .rsvp-form form .is-focused label {
+    color: #c0a182 !important; }
+  main .rsvp-card .rsvp-form .mdl-textfield .mdl-textfield__label::after {
+    background-color: #c0a182 !important; }
+  main .rsvp-card .rsvp-form .input-field label .mdl-radio__outer-circle {
+    border: 2px solid #c0a182 !important; }
+  main .rsvp-card .rsvp-form .input-field label .mdl-radio__inner-circle {
+    background-color: #c0a182 !important; }
+  main .rsvp-card .rsvp-button button {
+    color: #fff; }
+
+main .location-card {
+  margin: 25px auto; }
+  main .location-card .location-title {
+    height: 150px;
+    width: 100%;
+    background-image: url(/images/uclub.jpg);
+    background-size: 100% 100%;
+    color: #eee; }
+    main .location-card .location-title h2 {
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+  main .location-card .location-text address,
+  main .location-card .location-text p {
+    font-size: 1.6em; }
+  main .location-card .location-text p {
+    margin: 15px 0 0 0; }
+  main .location-card .location-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    main .location-card .location-buttons button {
+      width: 100%;
+      margin-bottom: 5px; }
+
+main .registry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0; }
+  main .registry p {
+    margin: auto 15px; }
+  main .registry .registry-gifts,
+  main .registry .registry-cash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    main .registry .registry-gifts h3,
+    main .registry .registry-cash h3 {
+      font-size: 2.2em; }
+    main .registry .registry-gifts a.amazon-svg,
+    main .registry .registry-cash a.amazon-svg {
+      position: relative; }
+    main .registry .registry-gifts a.amazon-svg::after,
+    main .registry .registry-cash a.amazon-svg::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      bottom: 0;
+      height: 3px;
+      width: 80%;
+      /* or 100px */
+      border-bottom: 3px solid #c0a182; }
+    main .registry .registry-gifts img,
+    main .registry .registry-cash img {
+      padding: 25px;
+      width: 90%;
+      height: auto; }

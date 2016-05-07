@@ -1,0 +1,149 @@
+/*color pallet:
+#e2dac6  #eec
+lightgray
+hsl(42,32,83)
+rgb(226,218,198)
+#c0a182  #ca8
+rosybrown
+hsl(30,32,63)
+rgb(192,161,130)
+#88987c  #9a8
+gray
+hsl(94,11,54)
+rgb(136,152,124)
+*/
+$mid-gray: #d9d9d9;
+$primary-color: rgba(192,161,130,1);
+//$primary-color: rgba(136,152,124,1);
+* {
+  font-family: "Roboto",sans-serif;
+}
+
+body {
+  background-color: $mid-gray;
+}
+
+button {
+  background-color: $primary-color !important;
+}
+
+header {
+  background-color: $primary-color !important;
+}
+
+main {
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 75vh;
+    background-image: url(/images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: 120% 120%;
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+    }
+  }
+  .rsvp-card {
+    margin: 25px auto;
+    .rsvp-title {
+      background-color: $primary-color !important;
+      color: #fff;
+    }
+    .rsvp-form {
+      form .is-focused label {
+        color: $primary-color !important;
+      }
+      .mdl-textfield .mdl-textfield__label::after {
+        background-color: $primary-color !important;
+      }
+      .input-field label .mdl-radio__outer-circle {
+        border: 2px solid $primary-color !important
+      }
+      .input-field label .mdl-radio__inner-circle {
+        background-color: $primary-color !important;
+      }
+    }
+    .rsvp-button button{
+      color: #fff;
+    }
+  }
+  .location-card {
+    margin: 25px auto;
+    .location-title {
+      height: 150px;
+      width: 100%;
+      background-image: url(/images/uclub.jpg);
+      background-size: 100% 100%;
+      color: #eee;
+      h2 {
+        text-shadow: -1px -1px 0 #000,
+                      1px -1px 0 #000,
+                     -1px 1px 0 #000,
+                      1px 1px 0 #000;
+      }
+    }
+    .location-text{
+      address,
+      p {
+        font-size: 1.6em;
+      }
+      p {
+        margin: 15px 0 0 0;
+      }
+    }
+    .location-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      button {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .registry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    p {
+      margin: auto 15px;
+    }
+    .registry-gifts,
+    .registry-cash {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      h3 {
+        font-size: 2.2em;
+      }
+      a.amazon-svg {
+        position: relative;
+      }
+      a.amazon-svg::after {
+        content : "";
+        position: absolute;
+        left    : 10%;
+        bottom  : 0;
+        height  : 3px;
+        width   : 80%;  /* or 100px */
+        border-bottom: 3px solid $primary-color;
+      }
+      img {
+        padding: 25px;
+        width: 90%;
+        height: auto;
+      }
+    }
+  }
+}
