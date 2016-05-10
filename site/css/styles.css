@@ -30,7 +30,7 @@ main .hero-image {
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 75vh;
+  height: 80vh;
   background-image: url(../images/hero-image.jpg);
   background-repeat: no-repeat;
   background-size: 120% 120%; }
@@ -39,65 +39,84 @@ main .hero-image {
     height: 100%;
     opacity: 0.3; }
 
-main .rsvp-card {
-  margin: 25px auto; }
-  main .rsvp-card .rsvp-title {
-    background-color: #c0a182 !important;
-    color: #fff; }
-  main .rsvp-card .rsvp-form form .is-focused label {
-    color: #c0a182 !important; }
-  main .rsvp-card .rsvp-form .mdl-textfield .mdl-textfield__label::after {
-    background-color: #c0a182 !important; }
-  main .rsvp-card .rsvp-form .input-field label .mdl-radio__outer-circle {
-    border: 2px solid #c0a182 !important; }
-  main .rsvp-card .rsvp-form .input-field label .mdl-radio__inner-circle {
-    background-color: #c0a182 !important; }
-  main .rsvp-card .rsvp-button button {
-    color: #fff; }
-
-main .location-card {
-  margin: 25px auto; }
-  main .location-card .location-title {
-    height: 150px;
-    width: 100%;
-    background-image: url(../images/uclub.jpg);
-    background-size: 100% 100%;
-    color: #eee; }
-    main .location-card .location-title h2 {
-      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
-  main .location-card .location-text address,
-  main .location-card .location-text p {
-    font-size: 1.6em; }
-  main .location-card .location-text p {
-    margin: 15px 0 0 0; }
-  main .location-card .location-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    main .location-card .location-buttons button {
+main .cards-well {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start; }
+  main .cards-well .rsvp-card {
+    flex-basis: 330px;
+    width: 330px;
+    margin: 25px; }
+    main .cards-well .rsvp-card .rsvp-title {
+      background-color: #c0a182 !important;
+      color: #fff; }
+    main .cards-well .rsvp-card .rsvp-form {
+      padding-bottom: 5px; }
+      main .cards-well .rsvp-card .rsvp-form form .is-focused label {
+        color: #c0a182 !important; }
+      main .cards-well .rsvp-card .rsvp-form .mdl-textfield .mdl-textfield__label::after {
+        background-color: #c0a182 !important; }
+      main .cards-well .rsvp-card .rsvp-form .input-field label .mdl-radio__outer-circle {
+        border: 2px solid #c0a182 !important; }
+      main .cards-well .rsvp-card .rsvp-form .input-field label .mdl-radio__inner-circle {
+        background-color: #c0a182 !important; }
+    main .cards-well .rsvp-card .rsvp-button button {
+      color: #fff; }
+  main .cards-well .location-card {
+    flex-basis: 330px;
+    width: 330px;
+    margin: 25px; }
+    main .cards-well .location-card .location-title {
+      height: 150px;
       width: 100%;
-      margin-bottom: 5px; }
+      background-image: url(../images/uclub.jpg);
+      background-size: 100% 100%;
+      color: #eee; }
+      main .cards-well .location-card .location-title h2 {
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+    main .cards-well .location-card .location-text address,
+    main .cards-well .location-card .location-text p {
+      font-size: 1.6em; }
+    main .cards-well .location-card .location-text p {
+      margin: 15px 0 0 0; }
+    main .cards-well .location-card .location-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      main .cards-well .location-card .location-buttons button {
+        width: 100%;
+        margin-bottom: 5px; }
 
 main .registry {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
   width: 100%;
   background-color: #fff;
   padding: 20px 0; }
+  main .registry h2 {
+    width: 100%;
+    text-align: center; }
   main .registry p {
-    margin: auto 15px; }
+    margin: auto 15px;
+    padding: 0 30px; }
   main .registry .registry-gifts,
   main .registry .registry-cash {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 100%; }
+    width: 375px; }
     main .registry .registry-gifts h3,
     main .registry .registry-cash h3 {
-      font-size: 2.2em; }
+      width: 100%;
+      font-size: 2.2em;
+      text-align: center; }
+    main .registry .registry-gifts a,
+    main .registry .registry-cash a {
+      width: 90%; }
     main .registry .registry-gifts a.amazon-svg,
     main .registry .registry-cash a.amazon-svg {
       position: relative; }
@@ -113,9 +132,8 @@ main .registry {
       border-bottom: 3px solid #c0a182; }
     main .registry .registry-gifts img,
     main .registry .registry-cash img {
-      padding: 25px;
       width: 90%;
-      height: auto; }
+      padding: 25px; }
 
 main .photos {
   display: flex;
@@ -127,13 +145,24 @@ main .photos {
     width: 90%;
     text-align: center;
     background-color: #c0a182;
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
     main .photos .photo-title h2 {
       font-size: 2.5em;
       margin-bottom: 0; }
+  main .photos p {
+    margin-bottom: 0; }
+  main .photos .gallery-toggle {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0; }
   main .photos .gallery-card {
+    display: none;
     margin: 10px;
     cursor: pointer; }
     main .photos .gallery-card img {
       width: 100%;
       height: 100%; }
+
+footer {
+  padding-bottom: 35px; }
