@@ -49,13 +49,13 @@
               <h2 class="mdl-card__title-text">RSVP</h2>
             </div>
             <div class="mdl-card__supporting-text rsvp-form">
-              <form name="rsvp-form" action="">
+              <form name="rsvp-form" method="POST" action="https://formspree.io/brandonlee781@gmail.com">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" id="rsvp-name">
+                  <input class="mdl-textfield__input" type="text" id="rsvp-name" name="name">
                   <label class="mdl-textfield__label" for="rsvp-name">Your Name...</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" id="rsvp-email">
+                  <input class="mdl-textfield__input" type="text" id="rsvp-email" name="email">
                   <label class="mdl-textfield__label" for="sample3">Your Email...</label>
                 </div>
                 <div class="input-field">
@@ -69,16 +69,15 @@
                   </label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield notes-field">
-                  <textarea class="mdl-textfield__input" type="text" rows= "2" id="rsvp-text" ></textarea>
+                  <textarea class="mdl-textfield__input" type="text" rows= "2" id="rsvp-text" name="message"></textarea>
                   <label class="mdl-textfield__label" for="rsvp-text">Additional Notes...</label>
+                </div>
+                <div class="mdl-card__actions mdl-card--border rsvp-button">
+                  <input type="submit" form="rsvp-form" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submit-button">
                 </div>
               </form>
             </div>
-            <div class="mdl-card__actions mdl-card--border rsvp-button">
-              <button type="submit" form="rsvp-form" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Submit <i class="material-icons right">send</i>
-              </button>
-            </div>
+
           </div><!--End RSVP Form-->
           <div class="demo-card-wide mdl-card mdl-shadow--2dp location-card"><!--Begin Location Card -->
             <a name="location"></a>

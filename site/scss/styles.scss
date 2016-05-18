@@ -75,9 +75,9 @@ main {
         .input-field label .mdl-radio__inner-circle {
           background-color: $primary-color !important;
         }
-        // .notes-field {
-        //   padding-bottom: 10px;
-        // }
+        .rsvp-button .submit-button {
+          background-color: $primary-color !important;
+        }
       }
       .rsvp-button button{
         color: #fff;
